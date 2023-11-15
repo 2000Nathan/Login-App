@@ -1,0 +1,37 @@
+
+
+<ion-content [fullscreen]="true">
+  <div class="header" style="color: #1F41BB">
+    <ion-title class="title">Login here</ion-title>
+    <p class="subTitle">Welcome back you’ve
+      been missed!</p>
+  </div>
+  
+  <form [formGroup]="loginForm">
+    <div class="ion-padding">
+      <ion-item>
+        <ion-input class="input" formControlName="email" placeholder="Email" type="email"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input class="input" formControlName="password" placeholder="Password" type="password"></ion-input>
+      </ion-item>
+      <div class="forgotpassword">
+        <a [routerLink]="['/forgotpassword']" style="color:#1F41BB">Forgot password?</a>
+      </div>
+      <br>
+      <ion-button (click)="login()" expand="block"  >Login</ion-button>
+      <br>
+      <div class="signupLink">
+        <p>Create new account</p><a [routerLink]="['/singup']">singup</a>
+      </div>  
+    </div>
+  </form>
+
+  <br>
+  <br>
+  <br>
+  <div class="buttonsContainer">
+    <ion-button (click)="signInWithGoogle()"><ion-icon name="logo-google"></ion-icon></ion-button>
+    <ion-button (click)="signInWithFacebook()"><ion-icon name="logo-facebook"></ion-icon></ion-button>
+  </div>
+</ion-content>
